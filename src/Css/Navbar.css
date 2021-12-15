@@ -1,0 +1,19 @@
+.Nav_container {
+  height: 60px;
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.left {
+  font-weight: 700;
+  color: rgb(165, 53, 53);
+}
+.right {
+  margin-right: 40px;
+}
