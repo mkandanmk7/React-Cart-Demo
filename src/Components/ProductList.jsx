@@ -9,7 +9,11 @@ const ProductList = () => {
       <div className="product_container">
         {data.map((product) => {
           return (
-            <Link to={`/product/${product.id}`} className="link">
+            <Link
+              to={`/product/${product.id}`}
+              key={product.id}
+              className="link"
+            >
               <div className="product" key={product.id}>
                 <img
                   src={product.image}

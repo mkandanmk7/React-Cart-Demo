@@ -5,6 +5,7 @@ const Cart = () => {
   return (
     <div>
       <Navbar />
+      <h3 style={{ marginTop: "90px " }}>Cart Page</h3>
     </div>
   );
 };
