@@ -1,6 +1,7 @@
 import { Badge, IconButton, withStyles } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Css/Navbar.css";
 
 //styled for customize;
@@ -18,11 +19,17 @@ const Navbar = () => {
   return (
     <div>
       <div className="Nav_container">
-        <div className="left">Shopify</div>
+        <div className="left">
+          <Link to="/" className="link">
+            Shopify
+          </Link>
+        </div>
         <div className="right">
           <IconButton aria-label="cart">
             <StyledBadge badgeContent={4} color="secondary">
-              <ShoppingCart />
+              <Link to="/cart" className="link">
+                <ShoppingCart />
+              </Link>
             </StyledBadge>
           </IconButton>
         </div>

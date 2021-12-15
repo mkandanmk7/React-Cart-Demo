@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Css/ProductList.css";
 import data from "../data";
 
@@ -8,12 +9,22 @@ const ProductList = () => {
       <div className="product_container">
         {data.map((product) => {
           return (
-            <div className="product" key={product.id}>
-              <img src={product.image} alt="product_image" />
-              <h2 className="name"> {product.name}</h2>
-              <div className="desc">{product.desc}</div>
-              <div className="price">₹ {product.price}</div>
-            </div>
+            <Link to={`/product/${product.id}`} className="link">
+              <div className="product" key={product.id}>
+                <img
+                  src={product.image}
+                  className="image"
+                  alt="product_image"
+                />
+                <div>
+                  <div className="priceEnd">
+                    <h2 className="name"> {product.name}</h2>
+                    <div className="price">₹ {product.price}</div>
+                  </div>
+                  <div className="desc">{product.desc}</div>
+                </div>
+              </div>
+            </Link>
           );
         })}
       </div>

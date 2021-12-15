@@ -15,6 +15,28 @@
   margin: 10px;
   background: #fff;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.
+.image {
+  object-fit: cover;
+  display: flex;
+  margin: auto;
+}
+.priceEnd {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.name {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.price {
+  font-size: 1.3rem;
+}
+.desc {
+  color: #777;
+}

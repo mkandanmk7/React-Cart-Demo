@@ -9,3 +9,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+}
