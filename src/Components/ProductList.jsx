@@ -12,9 +12,10 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   //load single product
-  const singleProduct = ({ product }) => {
+  const singleProduct = (product) => {
     dispatch({ type: "getCurrentProduct", payload: product });
   };
+
   return (
     <div className="Pcontainer">
       <div className="product_container">
@@ -34,7 +35,10 @@ const ProductList = () => {
                     key={product.id}
                     className="link"
                   >
-                    <Button onClick={singleProduct} variant="outlined">
+                    <Button
+                      onClick={() => singleProduct(product)}
+                      variant="outlined"
+                    >
                       View Item
                     </Button>
                   </Link>
