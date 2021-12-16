@@ -1,7 +1,8 @@
-import React from "react";
+import * as redux from "redux";
+import CartReducer from "./CartReducer";
 
-const Store = () => {
-  return <div></div>;
-};
+const rootReducer = redux.combineReducers({
+  cart: CartReducer,
+});
 
-export default Store;
+export const store = redux.createStore(rootReducer);

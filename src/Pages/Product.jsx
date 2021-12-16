@@ -1,6 +1,6 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../Components/Navbar";
 import data from "../data";
 
 const Product = () => {
@@ -9,7 +9,6 @@ const Product = () => {
   console.log(data);
   return (
     <div className="S_product">
-      <Navbar />
       <div className="S_container">
         <img src="img" alt="product_container" className="S_image" />
         <div className="details">

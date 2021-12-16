@@ -1,4 +1,7 @@
+import data from "../data";
+
 let initialState = {
+  allProduct: data,
   products: [],
   quantity: 0,
   total: 0,
@@ -41,3 +44,5 @@ export const CartReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default CartReducer;
