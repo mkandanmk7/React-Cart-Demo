@@ -10,7 +10,9 @@ const Total = () => {
         <h2 className="Total">Total Amount : ₹ 4000 </h2>
 
         <div className="Checkout">
-          <Button variant="container">Check Out</Button>
+          <Button variant="contained" color="secondary">
+            Check Out
+          </Button>
         </div>
       </div>
     </div>

@@ -45,6 +45,28 @@
   font-size: 2rem;
   width: 80%;
 }
+.inc {
+  display: flex;
+  width: 200px;
+  background: #ddd;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.inc_quantity {
+  /* margin-right: 10px; */
+}
+.value {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #999;
+  font-size: 20px;
+  color: #222;
+}
 .add {
   font-size: 1.5rem;
   width: 20%;

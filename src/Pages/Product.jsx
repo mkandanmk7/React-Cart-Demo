@@ -39,6 +39,7 @@ const Product = () => {
           <div>
             <p className="S_desc">{singleProduct.desc}</p>
           </div>
+
           <Button className="add" onClick={() => addToCart(singleProduct)}>
             Add to Cart
           </Button>

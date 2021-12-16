@@ -1,9 +1,12 @@
 import { Button } from "@material-ui/core";
 import React from "react";
+import { useSelector } from "react-redux";
 
 import "../Css/CartDetails.css";
 
 const CartDetails = () => {
+  const cart = useSelector((state) => state.cart.products);
+  console.log("added products to cart:", cart);
   return (
     <div className="c_container">
       <div className="c_innercontainer">
@@ -14,9 +17,17 @@ const CartDetails = () => {
             <div className="c_price">price</div>
           </div>
           <div className="inc">
-            <Button variant="contained">+</Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              className="inc_quantity"
+            >
+              +
+            </Button>
             <p className="value">5</p>
-            <Button variant="contained">-</Button>
+            <Button variant="contained" color="primary">
+              -
+            </Button>
           </div>
         </div>
       </div>
