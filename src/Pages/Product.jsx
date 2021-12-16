@@ -1,12 +1,15 @@
 import { Button } from "@material-ui/core";
 import React from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import data from "../data";
 
 const Product = () => {
   const id = useParams();
+  const singleProduct = useSelector((state) => state.cart);
+  console.log("sinlge product", singleProduct);
   console.log(id);
-  console.log(data);
+  // console.log(data);
   return (
     <div className="S_product">
       <div className="S_container">

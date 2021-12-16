@@ -1,6 +1,6 @@
 import { Button } from "@material-ui/core";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../Css/ProductList.css";
 // import data from "../data";
@@ -8,6 +8,13 @@ import "../Css/ProductList.css";
 const ProductList = () => {
   const allProducts = useSelector((state) => state.cart);
   console.log(allProducts);
+
+  const dispatch = useDispatch();
+
+  //load single product
+  const singleProduct = ({ product }) => {
+    dispatch({ type: "getCurrentProduct", payload: product });
+  };
   return (
     <div className="Pcontainer">
       <div className="product_container">
@@ -27,7 +34,9 @@ const ProductList = () => {
                     key={product.id}
                     className="link"
                   >
-                    <Button variant="outlined">View Item</Button>
+                    <Button onClick={singleProduct} variant="outlined">
+                      View Item
+                    </Button>
                   </Link>
                   <Button variant="contained">Add to Cart</Button>
                 </div>

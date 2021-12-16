@@ -5,6 +5,7 @@ let initialState = {
   products: [],
   quantity: 0,
   total: 0,
+  currentProduct: null, //current product
 };
 
 export const CartReducer = (state = initialState, action) => {
@@ -38,6 +39,12 @@ export const CartReducer = (state = initialState, action) => {
         products: [...tempProducts],
         quantity: state.quantity - 1,
         total: state.total - action.product.price * action.product.quantity,
+      };
+    }
+    case "getCurrentProduct": {
+      return {
+        ...state,
+        currentProduct: action.payload,
       };
     }
     default:
