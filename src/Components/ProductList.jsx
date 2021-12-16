@@ -16,6 +16,13 @@ const ProductList = () => {
     dispatch({ type: "getCurrentProduct", payload: product });
   };
 
+  //add to cart ()
+
+  const addToCart = (product) => {
+    console.log("added product", product.name);
+    dispatch({ type: "addProduct", payload: product });
+  };
+
   return (
     <div className="Pcontainer">
       <div className="product_container">
@@ -42,7 +49,12 @@ const ProductList = () => {
                       View Item
                     </Button>
                   </Link>
-                  <Button variant="contained">Add to Cart</Button>
+                  <Button
+                    variant="contained"
+                    onClick={() => addToCart(product)}
+                  >
+                    Add to Cart
+                  </Button>
                 </div>
               </div>
             </div>

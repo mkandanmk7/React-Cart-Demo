@@ -1,9 +1,15 @@
 import React from "react";
+import CartDetails from "../Components/CartDetails";
+import Total from "../Components/Total";
+
+//css
+import "../Css/Cart.css";
 
 const Cart = () => {
   return (
     <div className="cart_container">
-      <h3 style={{ marginTop: "90px " }}>Cart Page</h3>
+      <CartDetails />
+      <Total />
     </div>
   );
 };
