@@ -1,5 +1,33 @@
 .c_container {
   flex: 2;
-  height: 300px;
+
   background-color: whitesmoke;
+}
+.c_innercontainer {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  border-bottom: 1px solid #888;
+}
+.image-contain {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c_image {
+  object-fit: contain;
+  height: 150px;
+  width: 150px;
+}
+.c_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+.c_name {
+  font-size: 2rem;
 }

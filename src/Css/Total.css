@@ -2,6 +2,8 @@
   flex: 1;
   height: 300px;
   background-color: whitesmoke;
+  position: sticky;
+  top: 100px;
 }
 .total_innerContainer {
   padding: 10px;

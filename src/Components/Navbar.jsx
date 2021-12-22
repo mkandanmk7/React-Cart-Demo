@@ -17,7 +17,8 @@ const StyledBadge = withStyles((theme) => ({
 }))(Badge);
 
 const Navbar = () => {
-  const quantity = useSelector((state) => state.cart.quantity);
+  const quantity = useSelector((state) => state.cart.cart.quantity);
+  console.log(quantity);
   return (
     <div>
       <div className="Nav_container">
